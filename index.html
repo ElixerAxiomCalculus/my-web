@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sayak | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <!-- Inside <head> -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  
+
+
+</head>
+<body>
+  <video autoplay loop muted playsinline id="bg-video">
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="alert-bar">
+    ⚠️ The chatbot is in beta version and currently under development. It may not respond correctly to all questions.
+  </div>
+  
+  <header class="navbar">
+  <div class="logo">Sayak.</div>
+
+
+  <!-- Navigation Links -->
+  <nav id="nav-menu">
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+  
+  <section class="hero" data-aos="zoom-in">
+    <h1>Hello, I'm <span class="name">Sayak Mondal</span></h1>
+    <h2 class="typing"><span id="typed-text"></span><span class="cursor">|</span></h2>
+    <a href="#projects" class="btn">See My Work</a>
+  </section>
+  
+  <section id="about" class="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>
+      I'm Sayak Mondal, a passionate CSE student from VIT Vellore with a love for AI, deep tech, and building futuristic digital experiences. I enjoy merging creativity with code to solve real-world problems.
+    </p>
+  </section>
+  <section id="experience" class="experience" data-aos="fade-up">
+    <h2>Experience</h2>
+    <div class="timeline">
+  
+      <!-- TAM-VIT -->
+      <div class="timeline-item">
+        <div class="line-dot"></div>
+        <div class="timeline-content">
+          <h3>TAM-VIT</h3>
+          <p>Core Committee Member – AI/ML</p>
+          <button onclick="toggleDetails('tam-details')">View Details</button>
+          <div class="details" id="tam-details">
+            <p>
+              🔹 Core Committee Member (Technical Domain - AI/ML)<br>
+              🔹 Skills: Machine Learning, Deep Learning, Team Coordination<br>
+              🔹 Duration: Mar 2025 – Present
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Mozilla -->
+      <div class="timeline-item">
+        <div class="line-dot"></div>
+        <div class="timeline-content">
+          <h3>Mozilla Firefox Club VIT</h3>
+          <p>Core Committee Member – AI/ML</p>
+          <button onclick="toggleDetails('mozilla-details')">View Details</button>
+          <div class="details" id="mozilla-details">
+            <p>
+              🔹 Core Committee Member (Technical Domain - AI/ML)<br>
+              🔹 Skills: AI, ML, Community Tech Support<br>
+              🔹 Duration: Mar 2025 – Present
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Aikyataan -->
+      <div class="timeline-item">
+        <div class="line-dot"></div>
+        <div class="timeline-content">
+          <h3>Aikyataan VIT</h3>
+          <p>Design & Technical Member</p>
+          <button onclick="toggleDetails('aikyataan-details')">View Details</button>
+          <div class="details" id="aikyataan-details">
+            <p>
+              🔹 Design & Technical Member (Cultural Club)<br>
+              🔹 Skills: Graphic Design, Branding, Web Design<br>
+              🔹 Duration: Mar 2025 – Present
+            </p>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  <section id="projects" class="projects" data-aos="fade-up">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+  
+      <!-- Project 1 -->
+      <div class="project-card">
+        <h3>ResumeIQ – Smart AI Resume Analyzer</h3>
+        <p>An AI-powered tool to analyze resumes and suggest job compatibility scores using ML.</p>
+        <a href="https://github.com/ElixerAxiomCalculus/ResumeIQ-Smart-AI-Resume-Analyzer" target="_blank">🔗 View on GitHub</a>
+      </div>
+  
+      <!-- Project 2 -->
+      <div class="project-card">
+        <h3>Image Classification Model</h3>
+        <p>Classifies images from a dataset using trained ML models with a user-friendly interface.</p>
+        <a href="https://github.com/ElixerAxiomCalculus/Image-Classification-Model" target="_blank">🔗 View on GitHub</a>
+      </div>
+  
+      <!-- Project 3 -->
+      <div class="project-card">
+        <h3>Sentiment + Rental + Image Classifier</h3>
+        <p>Combined NLP and CV model that performs multi-task classification in one ML pipeline.</p>
+        <a href="https://github.com/ElixerAxiomCalculus/Sentiment-Analysis-Rental-Classification-and-Image-Classification" target="_blank">🔗 View on GitHub</a>
+      </div>
+  
+      <!-- Project 4 -->
+      <div class="project-card">
+        <h3>CIFAR-10 Image Classifier & AI Agent</h3>
+        <p>Built a deep learning model for CIFAR-10 image classification and experimented with AI agents.</p>
+        <a href="https://github.com/ElixerAxiomCalculus/CIFAR10-Image-Classification-and-AI-Agent" target="_blank">🔗 View on GitHub</a>
+      </div>
+  
+    </div>
+  </section>
+  <section id="skills" class="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">Python</div>
+      <div class="skill">Machine Learning</div>
+      <div class="skill">Deep Learning</div>
+      <div class="skill">Generative AI</div>
+      <div class="skill">Flask</div>
+      <div class="skill">Scikit-Learn</div>
+      <div class="skill">Full-Stack Development</div>
+      <div class="skill">C/C++</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React.js</div>
+      <div class="skill">HTML & CSS</div>
+      <div class="skill">Bootstrap</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">Image Processing</div>
+      <div class="skill">Neural Networks</div>
+      <div class="skill">Bayesian Optimization</div>
+      <div class="skill">Regression Analysis</div>
+      <div class="skill">GitHub Copilot</div>
+      <div class="skill">Automation</div>
+      <div class="skill">Graphic Design</div>
+    </div>
+  </section>
+  <section id="certifications" class="certifications" data-aos="fade-up">
+    <h2>Certifications</h2>
+    <p>I've earned numerous certifications from reputed platforms like Microsoft, Meta, AWS, HackerRank, Google, and more.</p>
+    <a class="btn" href="https://www.linkedin.com/in/sayak-mondal-84b284213/details/certifications/" target="_blank">
+      View All on LinkedIn
+    </a>
+  </section>
+  <section id="contact" class="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <p>If you’d like to collaborate, have questions, or just want to say hi, feel free to reach out!</p>
+  
+    <div class="contact-links">
+      <a href="mailto:sayakmondal10@gmail.com">📧 sayakmondal10@gmail.com</a>
+      <a href="https://github.com/ElixerAxiomCalculus" target="_blank">💻 GitHub</a>
+      <a href="https://www.linkedin.com/in/sayak-mondal-84b284213/" target="_blank">🔗 LinkedIn</a>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>&copy; 2025 Sayak Mondal. All rights reserved.</p>
+  </footer>
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- Chatbot -->
+  <div class="chatbot-container">
+  <div class="chat-icon" onclick="toggleChat()">💬</div>
+  <div class="chat-box" id="chat-box">
+    <div class="chat-header">Ask me anything about me! <span onclick="toggleChat()">✖</span></div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <input type="text" id="chat-input" placeholder="Type your question..." onkeydown="handleKey(event)" />
+  </div>
+</div>
+
+</body>
+</html>
