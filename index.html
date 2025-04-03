@@ -14,6 +14,23 @@
 
 </head>
 <body>
+  <div id="preloader">
+    <div class="preloader-content">
+      <svg class="glitch-logo" viewBox="0 0 200 50">
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">
+          Sayak.
+        </text>
+      </svg>
+      <p class="loading-text">Initializing Universe...</p>
+      <div class="glow-bar"><div class="progress"></div></div>
+    </div>
+  </div>
+  <div id="intro-screen">
+    <h1 class="intro-text">Welcome to Sayak's Universe</h1>
+  </div>
+  
+
+  
   <video autoplay loop muted playsinline id="bg-video">
     <source src="video.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -40,7 +57,14 @@
   </nav>
 </header>
 
-  
+<div id="particles-js"></div>
+<div id="intro-video-wrapper">
+  <video id="intro-video" autoplay muted playsinline>
+    <source src="video 2.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
   <section class="hero" data-aos="zoom-in">
     <h1>Hello, I'm <span class="name">Sayak Mondal</span></h1>
     <h2 class="typing"><span id="typed-text"></span><span class="cursor">|</span></h2>
