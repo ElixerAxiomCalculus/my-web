@@ -156,5 +156,45 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 3200); // match fadeOutPreloader timing + delay
+});
+const intro = document.getElementById("intro-screen");
+setTimeout(() => {
+  intro.style.display = "none";
+}, 7000); // after text animation finishes
+
+// ==== HERO SECTION ANIMATION AFTER INTRO ====
+setTimeout(() => {
+  // Reveal hero section with animation
+  gsap.to(".hero", {
+    opacity: 1,
+    y: 0,
+    duration: 1.5,
+    ease: "power3.out"
+  });
+
+  // Start typewriter effect
+  startTypingEffect(); // Make sure this is defined separately
+
+}, 7000); // 7 seconds delay for cinematic intro
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  const intro = document.getElementById("intro-video");
+  const wrapper = document.getElementById("intro-video-wrapper");
+
+  intro.onended = () => {
+    wrapper.classList.add("fade-out");
+
+    // Optional: remove it from the DOM after fade
+    setTimeout(() => {
+      wrapper.remove();
+    }, 1000);
+  };
+});
 
 
